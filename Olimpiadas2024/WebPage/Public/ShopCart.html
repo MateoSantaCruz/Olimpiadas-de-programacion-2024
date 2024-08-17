@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="./CSS/Index.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-left">
+                <div class="header-logo">
+                    <a href="./Index.html">INET</a>
+            </div>
+        </div>
+            <div class="header-right">
+                <div class="login-button">
+                    <button id="login-btn" class="login-toggle">
+                        <img src="./Assets/sesion.png" alt="Iniciar sesión">
+                    </button>
+                    <div id="login-menu" class="dropdown-menu">
+                        <div class="dropdown-content">
+                            <h3>Bienvenido</h3>
+                            <a href="./Login.html">Iniciar sesión</a>
+                            <a href="./Register.html">Registrarse</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-button"> 
+                    <button id="sidebar-btn" class="sidebar-toggle" onclick="window.location.href='./ShopCart.html'">
+                        <img src="./Assets/carro-de-la-compra.png" alt="Menú">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <h1>Carrito de Compras</h1>
+    
+    <table id="carrito">
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Subtotal</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    
+    <button onclick="borrarTodo()">Borrar todo</button>
+    <button onclick="procederATransaccion()">Proceder a la transacción</button>
+
+    <script src="./JS/ShopCart.js"></script>
+</body>
+</html>

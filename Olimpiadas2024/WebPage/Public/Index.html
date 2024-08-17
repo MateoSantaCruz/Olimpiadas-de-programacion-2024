@@ -1,0 +1,97 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Ropa</title>
+    <link rel="stylesheet" href="./CSS/Index.css">
+    <link rel="icon" href="./Assets/camisetas.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Barra negra en la parte superior -->
+    <header>
+        <div class="header-container">
+            <div class="header-left">
+                <div class="header-logo">
+                    <a href="./Index.html">INET</a>
+            </div>
+        </div>
+            <div class="header-right">
+                <div class="login-button">
+                    <button id="login-btn" class="login-toggle">
+                        <img src="./Assets/sesion.png" alt="Iniciar sesión">
+                    </button>
+                    <div id="login-menu" class="dropdown-menu">
+                        <div class="dropdown-content">
+                            <h3>Bienvenido</h3>
+                            <a href="./Login.html">Iniciar sesión</a>
+                            <a href="./Register.html">Registrarse</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-button"> 
+                    <button id="sidebar-btn" class="sidebar-toggle" onclick="window.location.href='./ShopCart.html'">
+                        <img src="./Assets/carro-de-la-compra.png" alt="Menú">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+        <section id="products">
+            <h1>Productos de Ropa</h1>
+            <div class="product-item">
+                <h3>Nombre del Producto</h3>
+                <p>Precio: $10.00</p>
+                <button onclick="agregarAlCarrito('producto_id')">Agregar al carrito</button>
+              </div>
+            <div class="product-item">
+                <h3>Nombre del Producto</h3>
+                <p>Precio: $10.00</p>
+                <button onclick="agregarAlCarrito('producto_id')">Agregar al carrito</button>
+              </div>
+            <div class="product-item">
+                <h3>Nombre del Producto</h3>
+                <p>Precio: $10.00</p>
+                <button onclick="agregarAlCarrito('producto_id')">Agregar al carrito</button>
+              </div>
+            <div class="product-item">
+                <h3>Nombre del Producto</h3>
+                <p>Precio: $10.00</p>
+                <button onclick="agregarAlCarrito('producto_id')" >Agregar al carrito</button>
+              </div>
+        </section>
+    </main>
+      <!-- Footer -->
+
+<footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h3>Información de contacto</h3>
+          <p>Dirección: San Luis 1445</p>
+          <p>Teléfono: 0223 4964151</p>
+          <p>Email: tecnica2mardel@gmail.com</p>
+          <a href="https://www.facebook.com/tecnica2mardel/?locale=es_LA">Facebook</a>
+        </div>
+          <div class="col-md-4 ">
+            <a href="#" class="home-link">INICIO</a>
+          </div>
+        <div class="col-md-4">
+          <h3>ESCUELA DE EDUCACION SECUNDARIA TECNICA N°2</h3>
+              <p>Copyright &copy; Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Footer -->
+
+    <!-- Enlazar archivo JavaScript -->
+    <script src="./JS/Index.js"></script>
+    <script src="./JS/Products.js"></script>
+</body>
+</html>

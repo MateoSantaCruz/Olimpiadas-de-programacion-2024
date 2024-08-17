@@ -1,0 +1,413 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background-color:rgb(162, 151, 144) ;
+}
+
+header {
+    background-color:rgb(70, 63, 58);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.header-container {
+    display: flex;
+    width: 100%;
+}
+.header-logo a{
+    font-family:'FreeSansBold'; 
+    src: url(./Tipografias/FreeSansBold.ttf);
+    font-size:x-large;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.header-left{
+    display: flex;
+    align-items: center;
+    padding-right: 87%;
+}
+.header-right {
+    display: flex;
+    align-items: center;
+
+}
+
+/* Estilo del botón de inicio de sesión con imagen */
+.login-button {
+    position: relative;
+    margin-left: 10px; /* Espaciado opcional entre botones */
+}
+
+.login-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 50px; /* Establece el ancho deseado del botón */
+    height: 50px; /* Establece la altura deseada del botón */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-toggle img {
+    width: 30px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: 30px; /* Ajusta el tamaño de la imagen según sea necesario */
+}
+
+.close-toggle {
+    border: none;  /* Elimina el borde si es un botón */
+    padding: 0;    /* Elimina el padding del botón */
+    background: transparent; /* Fondo transparente si es un botón */
+    cursor: pointer; /* Cambia el cursor cuando pasas sobre el botón */
+}
+
+.close-toggle img {
+    width: 40px;  /* Ajusta el ancho de la imagen */
+    height: auto;  /* Mantiene la proporción de la imagen */
+}
+  
+
+  
+
+/* Estilo del menú desplegable */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 60px; /* Ajusta según el tamaño del botón */
+    right: 0;
+    width: 200px;
+    background-color: white;
+    color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1000;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-content {
+    padding: 10px;
+}
+
+.dropdown-content h3 {
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Estilo del botón de la barra lateral con imagen */
+.sidebar-button {
+    position: relative;
+    margin-left: 10px; /* Espaciado opcional entre botones */
+}
+
+.sidebar-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 40px; /* Establece el ancho deseado del botón */
+    height: 40px; /* Establece la altura deseada del botón */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-toggle img {
+    width: 24px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: 24px; /* Ajusta el tamaño de la imagen según sea necesario */
+}
+
+/* Barra lateral */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    text-align: right;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.sidebar a:hover {
+    background-color: #555;
+}
+
+#close-sidebar {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Contenido principal */
+main {
+    padding: 20px;
+}
+
+#products {
+    text-align: center;
+    margin-top: 60px; /* Ajusta según la altura de la barra negra */
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.product-item {
+    background-color: rgb(236, 234, 233);
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    text-align: left;
+}
+
+.product-item h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.product-item p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.add-to-cart-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+.cart-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+.product-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 4px;
+}
+
+.item-details {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.quantity-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.quantity-button:hover {
+    background-color: #0056b3;
+}
+
+.quantity-input {
+    width: 50px;
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.remove-item-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.remove-item-button:hover {
+    background-color: #cc0000;
+}
+
+.cart-summary {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: right;
+}
+
+.checkout-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.checkout-button:hover {
+    background-color: #218838;
+}
+
+table { width: 100%; border-collapse: collapse; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+th { background-color: #f4f4f4; }
+button { margin: 5px; }
+
+footer {
+    background-color: rgb(70, 63, 58);
+    color: #fff;
+    padding: 30px;
+    font-size: 14px;
+}
+
+.home-link{
+    position: relative;
+    color: white;
+    text-decoration: none;
+}
+
+.home-link::after{
+content: '';
+position:absolute;
+width: 100%;
+height: 3px;
+background: #8A6851;
+border-radius: 5px;
+left: 0%;
+bottom: -6px;
+transform: scaleX(0);
+transition: .5s;
+transform-origin:center ;
+}
+
+.home-link:hover::after {
+transform: scaleX(1);
+}
+
+footer a{
+    text-decoration: none;
+    color:#888888;
+    transition: 0.3s ;
+}
+  
+footer h3 {
+    font-family:'FreeSansBold'; 
+    src: url(./Tipografias/FreeSansBold.ttf);
+    font-weight:700;
+     color: white;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+  
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+  
+footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+  
+footer .col-md-4 {
+    width: 33.33%;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+  
+footer .col-md-4:last-child {
+    padding-right: 0;
+}
+
+.home-link {
+    font-family:'FreeSansBold'; 
+    src: url(./Tipografias/FreeSansBold.ttf);
+    font-weight:900;
+    display: block;
+    margin: 20px auto;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: rgb(70, 63, 58);
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.home-link:hover {
+    color:white;
+}
+
+footer a:hover{
+    background-color: rgb(70, 63, 58);
+    color: #7F754D;
+}
